@@ -16,13 +16,11 @@ class App extends Component<AppProps> {
     const { greeting } = this.props.mobxStore!;
 
     return (
-      <main>
+      <main className="App">
         <section>
-          <div className="App">
-            <header className="App-header">
-              {greeting}
-              <button onClick={this.clickHandler}>Change Greeting</button>
-            </header>
+          <div>
+            <h1>{greeting}</h1>
+            <button onClick={this.clickHandler}>Change Greeting</button>
           </div>
         </section>
       </main>
