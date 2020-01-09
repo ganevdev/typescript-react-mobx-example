@@ -9,13 +9,11 @@ export interface IMobxStore {
 export class MobxStore implements IMobxStore {
   @observable name = 'World';
 
-  @computed
-  public get greeting(): string {
+  @computed get greeting(): string {
     return `Hello ${this.name}`;
   }
 
-  @action.bound
-  public setName(name: string): void {
+  @action.bound setName(name: string): void {
     this.name = name;
   }
 }
